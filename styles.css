@@ -15,39 +15,36 @@ a {
     color: inherit;
 }
 
-.block-container {
-    display: flex;
-    flex-direction: column;
+ul {
+    list-style: none;
 }
 
-.block {
-    width: 100%;
-    height: 102vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+section {
+    display: grid;
+    place-content: center;
+    align-content: center;
+    text-align: center;
+    min-height: 100vh;
 }
-.block:nth-child(1) {
-    height: 98vh;
-}
-.block:nth-child(2) {
+
+section:nth-child(2) {
     background-color: #31343a;
 }
 
-.block:nth-child(1) i {
+section:nth-child(1) i {
     position: absolute;
     bottom: 50px;
     cursor: pointer;
     padding: 15px;
     margin-left: -15px;
     border-radius: 50%;
+    transition: .3s;
 }
 
-.block:nth-child(1) i:hover {
+section:nth-child(1) i:hover {
     background-color: white;
     color: #22252c;
-    transition: .4s;
+    transition: .3s;
 }
 
 #toggleBtn {
@@ -56,18 +53,6 @@ a {
     cursor: pointer;
     color: white;
     font-size: 1em;
-    padding: 15px;
-    border-radius: 50%;
-}
-
-#toggleBtn:hover {
-    background-color: white;
-    color: #22252c;
-    transition: .4s;
-}
-
-.block ul {
-    list-style: none;
 }
 
 .main-list {
@@ -83,8 +68,6 @@ a {
 }
 
 .projects-div {
-    position: absolute;
-    margin-left: 30vw;
     padding: 15px;
     border-radius: 0 12px;
     background-color: white;
