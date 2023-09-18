@@ -83,16 +83,15 @@ a {
 }
 
 .projects-div {
-    position: absolute;
-    padding: 20px;
+    padding: 15px;
     border-radius: 0 12px;
     background-color: white;
     color: #22252c;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .projects-header {
