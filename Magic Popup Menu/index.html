@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.css">
+    <title>Magic Popup Menu</title>
+</head>
+<body>
+    <div class="menu-box">
+        <div class="menu">
+            <ul>
+                <li>
+                    <a style="--clr: rgb(56, 56, 246);" href="#">
+                        <span class="icon bi-peace"></span>
+                        <span class="text">Productivity</span>
+                    </a>
+                </li>
+                <li>
+                    <a style="--clr: rgb(249, 155, 48);" href="#">
+                        <span class="icon bi-graph-up-arrow"></span>
+                        <span class="text">Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a style="--clr: rgb(253, 51, 51);" href="#">
+                        <span class="icon bi-grid"></span>
+                        <span class="text">Workspace</span> 
+                    </a>
+                </li>
+                <li>
+                    <a style="--clr: rgb(194, 33, 253);" href="#">
+                        <span class="icon bi-palette2"></span>
+                        <span class="text">Appearance</span> 
+                    </a>
+                </li>
+                <li>
+                    <a style="--clr: rgb(253, 33, 161);" href="#">
+                        <span class="icon bi-pencil-square"></span>
+                        <span class="text">Customizing</span> 
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="bi-plus-lg menu-viewer"></button>
+    </div>
+    <script>
+        const button = document.querySelector('.menu-viewer');
+        button.addEventListener('click', () => {
+            document.querySelector('.menu-box').classList.toggle('menu-toggler')
+        })
+    </script>
+</body>
+</html>
