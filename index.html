@@ -17,12 +17,23 @@
                 </div>
                 <div id="2" class="block">
                     <h1>Web developer.</h1>
-                    <button onclick="show_hide()"><i id="toggleBtn" class="fa-solid fa-chevron-down"></i></button>
-                    <ul>
-                        <li><a>Projects</a></li>
+                    <button id="toggleBtn" onclick="showList()"><i id="toggleBtnIcon" class="fa-solid fa-chevron-down"></i></button>
+                    <ul class="main-list">
+                        <li><button>Projects</button></li>
                         <li><a>Resume</a></li>
                         <li><a>Contact</a></li>
                     </ul>
+                    <div class="projects-div">
+                        <div class="projects-header">
+                            <h2>My Projects:</h2>
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <ul class="projects-list">
+                            <li><a>Project 1</a></li>
+                            <li><a>Project 2</a></li>
+                            <li><a>Project 3</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </main>
