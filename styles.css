@@ -157,11 +157,11 @@ section {
     position: relative;
 }
 
-.video-container a {
+.video-container #desktop {
     border-radius: 12px;
 }
 
-.video-container a video {
+.video-container #desktop video {
     border-radius: 12px;
     max-width: 40vw;
 }
@@ -173,5 +173,23 @@ section {
     }
     .container div {
         max-width: 30vw;
+    }
+}
+
+.video-container #mobile {
+    display: none;   
+}
+
+.video-container #mobile video {
+    border-radius: 12px;
+    max-height: 50vh;
+}
+
+@media (max-width: 998px) {
+    .video-container #desktop {
+        display: none;
+    }
+    .video-container #mobile {
+        display: block;
     }
 }
