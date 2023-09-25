@@ -1,14 +1,13 @@
 :root {
-    --background-gradient: linear-gradient(rgb(29, 31, 37), rgb(60, 64, 83));
-    --main-color: rgb(140, 156, 248);
-    --secondary-color: rgb(140, 156, 248);
+    --background-gradient: linear-gradient(#1f181b, #3D2F36);
+    --main-color: #DEBFB0;
+    --secondary-color: #5d5a5a;
 
     --fs-xl: clamp(2.5rem, 7vw + 1rem, 4rem);
     --fs-600: 1.5rem;
     --fs-500: 1.25rem;
     --fs-400: 1rem;
 }
-
 @media (min-width: 768px) {
     :root {
         --fs-600: 1.75rem;
@@ -30,26 +29,22 @@ body {
     font-family: sans-serif;
 }
 
-h1 span {
-    color: var(--secondary-color);
+h1 span, h2 span {
+    color: var(--main-color);
 }
-
 h1 {
     font-size: var(--fs-xl);
     font-weight: bold;
 }
-
 h2 {
     font-size: var(--fs-600);
     font-weight: 600;
     text-transform: uppercase;
 }
-
 p, a {
     font-size: var(--fs-400);
     font-weight: 400;
 }
-
 a {
     color: inherit;
     text-decoration: none;
@@ -72,13 +67,16 @@ section {
     text-align: center;
     min-height: 101vh;
 }
-
 .hidden {
     opacity: 0;
     filter: blur(3px);
     transform: translateX(-100%);
 }
-
+.show {
+    filter: blur(0);
+    transform: translateX(0);
+    opacity: 1;
+}
 @media (prefers-reduced-motion: no-preference) {
     .hidden {
         transition: all 1s;
@@ -88,10 +86,36 @@ section {
     }
 }
 
-.show {
-    filter: blur(0);
-    transform: translateX(0);
-    opacity: 1;
+.btn {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+}
+.btn i {
+    padding: 10px;
+    border-radius: 50%;
+    transition: all .3s;
+}
+.btn:hover i {
+    background: rgb(218, 218, 218);
+    color: var(--main-color);
+    transition: all .5s;
+}
+
+.action-btn {
+    margin: auto;
+    padding: 15px 0;
+    border-radius: 10px;
+    width: 5rem;
+    border: 3px solid white;
+    background-color: var(--main-color);
+    transition: all .3s;
+}
+.action-btn:hover {
+    background-color: #c2a190;
+    border-color: var(--main-color);
+    color: var(--secondary-color);
+    transition: all .5s;
 }
 
 .to-top {
@@ -110,20 +134,11 @@ section {
     opacity: 0;
     transition: all .4s;
 }
-
-.to-top i {color: var(--secondary-color);}
-
+.to-top i {color: var(--main-color);}
 .to-top.active {
     display: flex;
     animation: fade-in .5s forwards;
 }
-
-@keyframes fade-in {
-    to {
-        opacity: 1;
-    }
-}
-
 .to-top.active:hover {
     background: rgb(218, 218, 218);
     color: var(--main-color);
@@ -133,6 +148,19 @@ section {
     transform: translateY(-5%);
     transition: all .3s;
 }
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+@media (max-width: 768px) {
+    .to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 30px;
+        height: 30px;
+    }
+}
 
 .container {
     display: flex;
@@ -141,26 +169,26 @@ section {
     justify-content: center;
     align-items: center;
 }
-
 .container div {
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 80vw;
 }
-
 .container div h2 {
     margin: 50px 0 10px 0;
+}
+
+#projectsTitle {
+    margin-bottom: 20px;
 }
 
 .video-container {
     position: relative;
 }
-
 .video-container #desktop {
     border-radius: 12px;
 }
-
 .video-container #desktop video {
     border-radius: 12px;
     max-width: 40vw;
@@ -177,12 +205,14 @@ section {
 }
 
 .video-container #mobile {
-    display: none;   
+    display: none;
+    height: 50vh;
+    max-width: 85vw;
 }
-
 .video-container #mobile video {
     border-radius: 12px;
-    max-height: 50vh;
+    height: 50vh;
+    max-width: 85vw;
 }
 
 @media (max-width: 998px) {
@@ -192,4 +222,25 @@ section {
     .video-container #mobile {
         display: block;
     }
+}
+
+.video-container .video-description {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    flex-direction: column;
+}
+#desktop:hover .video-description {
+    display: flex;
+    animation: fade-in .5s forwards;
+}
+
+.video-description span {
+    margin: 10px 0;
 }
