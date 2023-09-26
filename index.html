@@ -6,22 +6,62 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="static/styles.css" />
         <script src="https://kit.fontawesome.com/8baa3e793c.js" crossorigin="anonymous"></script>
-        <script defer src="static/scroll.js"></script>
+        <script defer src="static/script.js"></script>
         <title>Nicolas Cristal - Portfolio</title>
     </head>
     <body>
         <main>
             <section class="hidden">
+                <div class="lang">
+                    <i class="fa-solid fa-language"></i>
+                    <div class="lang-container">
+                        <a>EN</a>
+                        <a href="https://fydu.github.io/nicolas-cristal-es/">ES</a>
+                    </div>
+                </div>
                 <h1 class="name-h1"><span>Nicolas</span> Cristal</h1>
                 <h2>Web Developer Portfolio</h2>
-                <a class="btn" href="#about"><i class="fa-solid fa-chevron-down"></i></a>
+                <a class="btn" href="#projects"><i class="fa-solid fa-chevron-down"></i></a>
             </section>
+            
+            <section id="projects" class="hidden">
+                <h2 id="projectsTitle"><span>Projects</span></h2>
+                <div class="video-container">
+                    <a target="_blank" id="desktop" href="http://nicolascristal.pythonanywhere.com/landing" title="Click to visit ZEN">
+                        <video autoplay muted loop>
+                            <source src="media/zen.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-description">
+                            <span><strong>ZEN</strong></span>
+                            <span>Track your daily calories with ZEN app (Full Stack)</span>
+                        </div>
+                    </a>
+                    <a target="_blank" id="mobile" href="http://nicolascristal.pythonanywhere.com/landing" title="Click to visit ZEN">
+                        <img src="media/zen_mobile.jpg">
+                    </a>
+                </div>
+                <div class="video-container">
+                    <a target="_blank" id="desktop" href="https://www.tiendabait.com.ar/" title="Click to visit Bait Pisos & Deco">
+                        <video autoplay muted loop>
+                            <source src="media/pisosbait.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-description">
+                            <span><strong>BAIT Pisos & Deco</strong></span>
+                            <span>eCommerce store developed for client at SalesUp Agency (Front End)</span>
+                        </div>
+                    </a>
+                    <a target="_blank" id="mobile" href="https://www.tiendabait.com.ar/" title="Click to visit Bait Pisos & Deco">
+                        <img src="media/bait_mobile.jpg">
+                    </a>
+                </div>
+            </section>
+
             <section id="about" class="hidden">
                 <div class="container">
                     <div>
                         <h2><span>About</span> me</h2>
-                        <p>Former eCommerce consultant and project manager at SalesUp Agency, decided to change career path and study computer science.</p>
-                        <p>My passion for programming began in March 2023, and since then, I have been dedicated to continuous learning. I consider myself a problem solver, which is an integral part of programming, and I am actively seeking new challenges as a developer.</p>
+                        <p>Former eCommerce consultant and project manager at SalesUp Agency. This year I decided to change career paths and study computer science.</p>
+                        <p>My passion for programming began in March 2023, and since then, I have been dedicated to continuous learning. I consider myself a problem solver, which is an integral part of programming, and I am actively seeking new challenges as a self-taught developer.</p>
                         <p>Now, I'm 21 years old and looking for a job opportunity as a web developer.</p>
                         <a target="_blank" class="action-btn" href="media/cv.pdf">CV</a>
                     </div>
@@ -54,37 +94,7 @@
                     </div>
                 </div>
             </section>
-            <section class="hidden">
-                <h2 id="projectsTitle"><span>Projects</span></h2>
-                <div class="video-container">
-                    <a target="_blank" id="desktop" href="http://nicolascristal.pythonanywhere.com/landing" title="Click to visit ZEN">
-                        <video autoplay muted loop>
-                            <source src="media/zen.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-description">
-                            <span><strong>ZEN</strong></span>
-                            <span>Track your daily calories with ZEN app (Full Stack)</span>
-                        </div>
-                    </a>
-                    <a target="_blank" id="mobile" href="http://nicolascristal.pythonanywhere.com/landing" title="Click to visit ZEN">
-                        <img src="media/zen_mobile.jpg">
-                    </a>
-                </div>
-                <div class="video-container">
-                    <a target="_blank" id="desktop" href="https://www.tiendabait.com.ar/" title="Click to visit Bait Pisos & Deco">
-                        <video autoplay muted loop>
-                            <source src="media/pisosbait.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-description">
-                            <span><strong>BAIT Pisos & Deco</strong></span>
-                            <span>eCommerce store developed for client at SalesUp Agency (Front End)</span>
-                        </div>
-                    </a>
-                    <a target="_blank" id="mobile" href="https://www.tiendabait.com.ar/" title="Click to visit Bait Pisos & Deco">
-                        <img src="media/bait_mobile.jpg">
-                    </a>
-                </div>
-            </section>
+
             <section class="hidden">
                 <h2><span>Contact</span> me</h2>
                 <div class="contact">

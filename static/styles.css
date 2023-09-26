@@ -271,3 +271,39 @@ img {
 .contact a > i:hover {
     color: var(--main-color);
 }
+
+.lang {
+    position: absolute;
+    font-size: var(--fs-xl);
+    top: 16px;
+    right: 32px;
+    color: white;
+}
+.lang:hover {
+    color: var(--main-color);
+    transition: all .3s;
+}
+.lang-container {
+    display: none;
+    margin-top: -10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+}
+.lang:hover .lang-container {
+    display: flex;
+    animation: fade-in .5s forwards;
+}
+.lang-container a {
+    padding: 5px;
+    border-radius: 12px;
+}
+.lang-container a:hover {
+    background-color: var(--main-color);
+    color: var(--background-color);
+}
+.lang-container a:nth-child(1) {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
